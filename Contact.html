@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact</title>
+  <style>
+    body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f9;
+  color: #2c3e50;
+}
+
+header nav {
+  background-color: #2980b9;
+  color: white;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  padding: 0;
+  margin: 0;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f9fb;
+      margin: 0;
+      padding: 2em;
+      color: #2c3e50;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2980b9;
+      margin-bottom: 1em;
+    }
+
+    .contact-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 0.5em;
+      font-weight: bold;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.8em;
+      margin-bottom: 1.5em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 1em;
+    }
+
+    form button {
+      background-color: #3498db;
+      color: white;
+      padding: 0.8em 1.5em;
+      border: none;
+      border-radius: 4px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #2980b9;
+    }
+
+    .confirmation {
+      margin-top: 1em;
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- En-tête avec navigation -->
+  <header>
+    <nav>
+      <div class="profile">
+        <img src="images/Mon Profil.jpg" alt="Photo de Japheth" />
+        <h1>HUNSEY K. Japheth</h1>
+      </div>
+      <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="A Propos.html">À propos</a></li>
+        <li><a href="Projets.html">Projets</a></li>
+        <li><a href="Compétences.html">Compétences</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>Contactez-moi</h1>
+
+  <div class="contact-container">
+    <form id="contact-form">
+      <label for="name">Nom :</label>
+      <input type="text" id="name" name="name" placeholder="Votre nom" required />
+
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" placeholder="Votre adresse email" required />
+
+      <label for="subject">Objet :</label>
+      <input type="text" id="subject" name="subject" placeholder="Sujet de votre message" required />
+
+      <label for="message">Message :</label>
+      <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+
+      <button type="submit">Envoyer la demande</button>
+    </form>
+
+    <div class="confirmation" id="confirmation-message" style="display: none;">
+      ✅ Votre message a bien été envoyé. Merci !
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Simulation d'envoi (à remplacer par une vraie intégration serveur ou service email)
+      document.getElementById('confirmation-message').style.display = 'block';
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Projets</title>
+  <style>
+    header nav {
+      background-color: #2980b9;
+      color: white;
+      padding: 1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+    }
+
+    .profile img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 1em;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .menu a:hover {
+      text-decoration: underline;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 2em;
+      background-color: #f4f7f9;
+      color: #2c3e50;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 1em;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 0.5em;
+    }
+
+    p {
+      max-width: 800px;
+      margin: 0 auto 2em auto;
+      text-align: center;
+    }
+
+    .project {
+      background-color: #ffffff;
+      border-left: 5px solid #3498db;
+      padding: 1.5em;
+      margin-bottom: 2em;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .project h2 {
+      margin-top: 0;
+      color: #2980b9;
+    }
+
+    form div {
+      margin-bottom: 1em;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.3em;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5em;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 0.7em 1.5em;
+      font-size: 1em;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    #monthly-payment {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #27ae60;
+    }
+
+    ul {
+      padding-left: 1em;
+    }
+
+    ul li {
+      margin-bottom: 0.5em;
+    }
+
+    .result {
+      margin-top: 1em;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1em;
+      }
+
+      .project {
+        padding: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+      <!-- En-tête avec navigation -->
+  <header>
+    <nav>
+      <div class="profile">
+        <img src="images/Mon Profil.jpg" alt="Photo de Japheth" />
+        <h1>HUNSEY K. Japheth</h1>
+      </div>
+      <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="A Propos.html">À propos</a></li>
+        <li><a href="Projets.html">Projets</a></li>
+        <li><a href="Compétences.html">Compétences</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <h1>Mes Projets</h1>
+  <p>
+    Bienvenue dans la section Projets de mon portfolio.<br>
+    Vous trouverez ici une sélection de mes travaux récents en développement web et autres domaines. Chaque projet reflète mes compétences techniques, ma créativité et mon engagement.
+  </p>
+
+  <section class="project">
+    <h2>📊 Calculateur de prêt hypothécaire</h2>
+    <p>Un outil interactif permettant de calculer les mensualités d’un prêt hypothécaire selon le montant, le taux d’intérêt et la durée.</p>
+
+    <form id="loan-form">
+      <div>
+        <label for="amount">Montant du prêt (€) :</label>
+        <input type="number" id="amount" placeholder="Ex : 100000" required min="1">
+      </div>
+
+      <div>
+        <label for="interest">Taux d'intérêt annuel (%) :</label>
+        <input type="number" id="interest" placeholder="Ex : 2.5" required min="0" step="0.01">
+      </div>
+
+      <div>
+        <label for="years">Durée en années :</label>
+        <input type="number" id="years" placeholder="Ex : 20" required min="1">
+      </div>
+
+      <button type="submit">Calculer la mensualité</button>
+    </form>
+
+    <h3>Paiement mensuel estimé :</h3>
+    <p id="monthly-payment">--</p>
+  </section>
+
+  <section class="project">
+    <h2>🧒 Programme de vérification de l'âge</h2>
+    <p>Ce programme simple demande l’âge de l’utilisateur et affiche s’il est majeur ou mineur.</p>
+    <button onclick="verifierAge()">Vérifier votre âge</button>
+    <div class="result" id="result1"></div>
+  </section>
+
+  <section class="project">
+    <h2>🌍 World Revolution Group Sarl</h2>
+    <p>Présentation des domaines d’activité de WRG Sarl :</p>
+    <ul>
+      <li>✈️ Voyage</li>
+      <li>🏢 Immobilier</li>
+      <li>🏗️ BTP - Génie Civil - Architecture</li>
+      <li>💻 Informatique</li>
+      <li>💼 Business</li>
+      <li>📚 Formation</li>
+    </ul>
+    <p>World Revolution Group Sarl est une entreprise polyvalente offrant des services dans divers secteurs pour répondre aux besoins variés de ses clients.</p>
+    <p>Contactez-nous pour plus d'informations sur nos services et comment nous pouvons vous aider à atteindre vos objectifs.</p>
+    <p>Email : worldrevolutiongroup@gmail.com </p>
+    <p>Téléphone : (+228) 90 91 09 57 / 91 20 57 59 / 70 06 21 08 / 98 22 86 31</p>
+    <p>Site web : <a href="https://worldrevolutiongroup.net" target="_blank">www.worldrevolutiongroup.net</a></p>
+  </section>
+  <scropt src="Projets.js"></script>
+</body>
+</html>

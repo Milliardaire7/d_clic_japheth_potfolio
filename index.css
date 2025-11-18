@@ -1,0 +1,101 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f9;
+  color: #2c3e50;
+}
+
+header nav {
+  background-color: #2980b9;
+  color: white;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  padding: 0;
+  margin: 0;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  padding: 2em;
+  text-align: center;
+}
+
+.intro {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.btn, .contact-button {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.7em 1.5em;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.btn:hover, .contact-button:hover {
+  background-color: #2471a3;
+}
+
+.presentation-image {
+  text-align: center;
+  padding: 2em;
+}
+
+.presentation-image img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+footer {
+  background-color: #ecf0f1;
+  text-align: center;
+  padding: 1.5em;
+  font-size: 0.9em;
+  margin-top: 2em;
+}
+/* Animation d’apparition */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.content, .intro, .presentation-image img {
+  animation: fadeIn 1.2s ease-out;
+}

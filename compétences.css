@@ -1,0 +1,153 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f9;
+  color: #2c3e50;
+}
+
+header nav {
+  background-color: #2980b9;
+  color: white;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  padding: 0;
+  margin: 0;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* Structure générale */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f9fc;
+  color: #2c3e50;
+  margin: 0;
+  padding: 2em;
+}
+
+/* Titre principal */
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5em;
+}
+
+/* Catégories de compétences */
+.categorie-competences {
+  margin-bottom: 2em;
+}
+
+.categorie-competences h2 {
+  font-size: 1.5em;
+  color: #2980b9;
+  margin-bottom: 0.5em;
+}
+
+/* Liste de compétences */
+.liste-competences {
+  list-style: none;
+  padding: 0;
+}
+
+.liste-competences li {
+  background-color: #ffffff;
+  margin-bottom: 0.8em;
+  padding: 1em;
+  border-left: 5px solid #2ecc71;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Nom de compétence */
+.competence-nom {
+  font-weight: bold;
+  flex: 1;
+}
+
+/* Niveau de compétence */
+.niveau {
+  font-size: 0.9em;
+  color: #555;
+  margin-left: 1em;
+}
+
+/* Barre de progression */
+.barre-progression {
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  margin-top: 0.5em;
+  overflow: hidden;
+}
+
+.barre-progression span {
+  display: block;
+  height: 100%;
+  background-color: #2ecc71;
+}
+
+/* Couleurs par niveau */
+.niveau[data-niveau="Débutant"] + .barre-progression span {
+  width: 30%;
+  background-color: #f39c12;
+}
+
+.niveau[data-niveau="Intermédiaire"] + .barre-progression span {
+  width: 60%;
+  background-color: #3498db;
+}
+
+.niveau[data-niveau="Avancé"] + .barre-progression span {
+  width: 90%;
+  background-color: #2ecc71;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .liste-competences li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .niveau {
+    margin-left: 0;
+    margin-top: 0.5em;
+  }
+}
